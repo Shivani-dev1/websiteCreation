@@ -5,17 +5,38 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
+<link rel="stylesheet" href="demo.css">
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="demo.js"></script>
+
 <style>
-* {
-  box-sizing: border-box;
-}
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background-image:
+            repeating-linear-gradient(
+                to right, transparent 0 100px,
+                #25283b22 100px 101px
+            ),
+            repeating-linear-gradient(
+                to bottom, transparent 0 100px,
+                #25283b22 100px 101px
+            );
 }
-
+body::before{
+            position: absolute;
+            width: min(1400px, 90vw);
+            top: 10%;
+            left: 50%;
+            height: 90%;
+            transform: translateX(-50%);
+            content: '';
+            background-image: url(images/bg.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: top center;
+            pointer-events: none;
+        }
 * {
   box-sizing: border-box;
   border:none
@@ -36,13 +57,8 @@ body {
   clear: both;
 }
 /* Style the header */
-header {
-  background-color: #666;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
-  color: white;
-}
+
+
 h1 {
   text-align: center;
   color: orange;
@@ -51,19 +67,7 @@ h1 {
 }
 
 /* Create two columns/boxes that floats next to each other */
-nav {
-  float: left;
-  width: 30%;
-  height: 300px; /* only for demonstration, should be removed */
-  background: #ccc;
-  padding: 20px;
-}
 
-/* Style the list inside the menu */
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
 .background{
 background-image: url('images/texture\ image.jpg');
 position: relative;
@@ -232,6 +236,11 @@ footer .footer-links img {
   padding: 20px;
 }
 
+._container_qnlyk_17 {
+  background-color: #000;
+  overflow: hidden;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -286,13 +295,197 @@ footer {
   margin-top: 5px;
 }
 
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 70px; /* Adjust for navbar height */
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  height: 100vh;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.text-overlay h1 {
+  margin-bottom: 0; /* Remove gap below */
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.text-overlay h2 {
+  margin-top: 0; /* Remove gap above */
+  color: #f5f1ed; /* Golden color */
+}
+
+.cta-button {
+  margin-top: 0.5px; /* Slight margin to separate the button */
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #d4a36f; /* Golden color */
+  border: none;
+  border-radius: 5px;
+  color: #000;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #ffae6d;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  background-color: #2a2929d7; /* Dark background for the navbar */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo a {
+  font-size: 2rem;
+  color: orange; /* Matches the infinity logo color */
+  text-decoration: dotted;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: orange; /* Hover effect matches the logo color */
+}
+
+.sidebar{
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  backdrop-filter: blur(10px);
+
+}
+.sidebar li{
+  width:100%;
+}
+.sidebar a{
+  width: 100%;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.menu-button{
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .hideonMobile{
+    display: none;
+  }
+  .menu-button{
+    display: block;
+  }
+}
+
+@media (max-width: 400px)  {
+  .sidebar{
+    width: 100%;
+  }
+}
+.event-info {
+  color: #f0f0f0;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 26px #00000074;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 500px;
+  background: #35170653;
+  border: 2px solid rgb(71,25,2);
+}
+
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 
 </style>
 </head>
 <body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="#">∞</a>
+      </div>
+    
+      <ul class="nav-links" id="nav-links">
+        <li onclick=onHome() class="hideonMobile"><a href="#home">Home</a></li>
+        <li onclick=onEvent() class="hideonMobile"><a href="#events">Events</a></li>
+        <li class="menu-button" onclick=showSideBar()><a href="#"><img src="images/menu_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" height="20" width="20" ></img></a></li>
 
-
+      </ul>
+      <ul class="sidebar">
+        <li onclick=hideSideBar()><a href="#"><img src="images/close_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" height="30" width="30" ></img></a></li>
+        <li onclick=onHome()><a href="#home">Home</a></li>
+        <li onclick=onEvent()><a href="#events">Events</a></li>  
+      </ul>
+    
+    </nav>
+  </header>
+  <section class="hero-section">
+    <div class="hero-content">
+      <img src="images/infinityy.png" alt="Infinity Loop" class="hero-image">
+      <div class="text-overlay">
+        <h1>INFINITO</h1>
+        <h2>2024</h2>
+        <button class="cta-button" onclick="onEvent()">Explore Now</button>
+      </div>
+    </div>
+  </section>
+  </div>
+ 
 <div class="background">
     <div class="content">
         <h1>WELCOME TO INFINITO</h1>
@@ -312,8 +505,135 @@ footer {
 
 </div>
 
+<div class="banner">
+  <div class="slider" style="--quantity: 10">
+      <div class="item" style="--position: 1"><img src="images/dragon_1.jpg" alt="dragon_1" onclick="onPressImage('images/dragon_1.jpg', 'dragon_1', 'Ritesh: 9876543210, Akhilesh: 9404549742')"></div>
+      <div class="item" style="--position: 2"><img src="images/dragon_2.jpg" alt="dragon_2" onclick="onPressImage('images/dragon_2.jpg', 'dragon_2', 'Ritesh: 9876543210, Akhilesh: 9404549742')"></div>
+      <div class="item" style="--position: 3"><img src="images/dragon_3.jpg" alt="dragon_3" onclick="onPressImage('images/dragon_3.jpg', 'dragon_3', 'Ritesh: 9876543210, Akhilesh: 9404549742')"></div>
+      <div class="item" style="--position: 4"><img src="images/dragon_4.jpg" alt="dragon_4" onclick="onPressImage('images/dragon_4.jpg', 'dragon_4', 'Ritesh: 9876543210, Akhilesh: 9404549742')"></div>
+      <div class="item" style="--position: 5"><img src="images/dragon_5.jpg" alt="dragon_5" onclick="onPressImage('images/dragon_5.jpg', 'dragon_5', 'Ritesh: 9876543210, Akhilesh: 9404549742')"></div>
+      <div class="item" style="--position: 6"><img src="images/dragon_6.jpg" alt="dragon_6" onclick="onPressImage('images/dragon_6.jpg', 'dragon_6', 'Ritesh: 9876543210, Akhilesh: 9404549742')"></div>
+      <div class="item" style="--position: 7"><img src="images/dragon_7.jpg" alt="dragon_7" onclick="onPressImage('images/dragon_7.jpg', 'dragon_7', 'Ritesh: 9876543210, Akhilesh: 9404549742')"></div>
+      <div class="item" style="--position: 8"><img src="images/dragon_8.jpg" alt="dragon_8" onclick="onPressImage('images/dragon_8.jpg', 'dragon_8', 'Ritesh: 9876543210, Akhilesh: 9404549742')"></div>
+      <div class="item" style="--position: 9"><img src="images/dragon_9.jpg" alt="dragon_9" onclick="onPressImage('images/dragon_9.jpg', 'dragon_9', 'Ritesh: 9876543210, Akhilesh: 9404549742')"></div>
+      <div class="item" style="--position: 10"><img src="images/dragon_10.jpg" alt=""></div>
+  </div>
+  <div class="content">
+      <h1 data-content="CSS ONLY">
+          CSS ONLY
+      </h1>
+      <div class="author">
+          <h2>LUN DEV</h2>
+          <p><b>Web Design</b></p>
+          <p>
+              Subscribe to the channel to watch many interesting videos
+          </p>
+      </div>
+      <div class="model"></div>
+  </div>
+</div>
 
+<div id="event-info" class="event-info" style="display: none;">
+  <h1 id="event-title" style="display: block;
+  font-size: 2em;
+  margin-block-start: .67em;
+  margin-block-end: .67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: 700;
+  unicode-bidi: isolate;"></h1>
+  <div class="button1" style="display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;">
+ <a href="https://forms.gle/QVdqD7r1RRkX9xkL6" class="_workButton_1cqbm_315" target="_blank" rel="noopener noreferrer" style="padding: 1em 1.5em;
+ border: none;
+ outline: none;
+ margin: 2px;
+ font-weight: 700;
+ font-size: large;
+ font-family: Inter,sans-serif;
+ color: #fff;
+ background: #111;
+   background-image: none;
+   background-size: auto;
+ cursor: pointer;
+ position: relative;
+ z-index: 0;
+ border-radius: 10px;
+ user-select: none;
+ -webkit-user-select: none;
+ touch-action: manipulation;
+ background-image: linear-gradient(45deg,rgb(102, 94, 86),rgb(64, 46, 46),#5c5956,#3c3837);
+ background-size: 200% 200%;
+ animation: _gradient-rotation_1cqbm_1 5s infinite linear;
+ transition: all .3s ease;
+ text-decoration: none;
+">Register Now</a>
 
+<a href="https://forms.gle/QVdqD7r1RRkX9xkL6" class="_workButton_1cqbm_315" target="_blank" rel="noopener noreferrer" style="padding: 1em 1.5em;
+border: none;
+outline: none;
+margin: 2px;
+font-weight: 700;
+font-size: large;
+font-family: Inter,sans-serif;
+color: #fff;
+background: #595454;
+  background-image: none;
+  background-size: auto;
+cursor: pointer;
+position: relative;
+z-index: 0;
+border-radius: 10px;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+background-image: linear-gradient(45deg,rgb(102, 94, 86),rgb(64, 46, 46),#5c5956,#3c3837);
+background-size: 200% 200%;
+animation: _gradient-rotation_1cqbm_1 5s infinite linear;
+transition: all .3s ease;
+text-decoration: none;
+">view RuleBook</a>
+  </div>
+  <div class="contact" style="padding: 1em 1.5em;
+  border: none;
+  outline: none;
+  margin: 2px;
+  font-weight: 700;
+  font-size: large;
+  font-family: Inter,sans-serif;
+  color: #fff;
+  background: #111;
+    background-image: none;
+    background-size: auto;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  background-image: linear-gradient(45deg,rgb(102, 94, 86),rgb(64, 46, 46),#5c5956,#3c3837);
+  background-size: 200% 200%;
+  animation: _gradient-rotation_1cqbm_1 5s infinite linear;
+  transition: all .3s ease;
+  text-decoration: none;">
+      <p>Point of Contacts:</p>
+      <div style="display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      font-weight: 20;">
+      <p id="event-contacts" style="font-size: 1.2rem;
+      line-height: 1.6;
+      color: #fff;"></p>
+       <p id="event-contacts1" style="font-size: 1.2rem;
+       line-height: 1.6;
+       color: #fff;"></p>
+      </div>
+  </div>
+</div>
   <div class="contact-container">
     <div class="contact-info">
       <h2>Contact Info</h2>
@@ -327,14 +647,69 @@ footer {
     <div class="map">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.2906337067646!2d85.0901051145386!3d25.5374799837455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58fe6bdaaaab%3A0x89b9705a0f245ebd!2sIIT%20Patna!5e0!3m2!1sen!2sin!4v1639110000000!5m2!1sen!2sin"
-        width="400"
-        height="300"
+        width="150%"
+        height="180%"
         style="border:0;"
         allowfullscreen=""
         loading="lazy">
       </iframe>
     </div>
   </div>
+
+  
+  <script>
+    function showSideBar(){
+      const sidebar = document.querySelector('.sidebar');
+      sidebar.style.display= 'flex';
+    }
+    function hideSideBar(){
+      const sidebar = document.querySelector('.sidebar');
+      sidebar.style.display= 'none';
+    }
+   function onHome(){
+    // const heroSection = document.querySelector('.background');
+    // heroSection.style.display= 'flex';
+    // window.open("https://media.istockphoto.com/id/184233907/photo/infinite-light.jpg?s=612x612&w=0&k=20&c=bO5GBmJUdRyaFmnsRyk-etEtMjIHKZRFn-T5jGwhq2Q=")
+    const banner = document.querySelector('.banner');
+    banner.style.display= 'none';
+    const sidebar = document.querySelector('.background');
+    sidebar.style.display= 'flex';
+    const firstDiv = document.querySelector('.hero-section');
+    firstDiv.style.display= 'flex';
+    const thirdDiv = document.querySelector('.contact-container');
+    thirdDiv.style.display= 'flex';
+  }
+
+   function onEvent(){
+    const banner = document.querySelector('.banner');
+    banner.style.display= 'flex';
+    const sidebar = document.querySelector('.background');
+    sidebar.style.display= 'none';
+    const firstDiv = document.querySelector('.hero-section');
+    firstDiv.style.display= 'none';
+    const thirdDiv = document.querySelector('.contact-container');
+    thirdDiv.style.display= 'none';
+   }
+
+   function onPressImage(x, y, z){
+    debugger;
+    document.body.style.backgroundImage = `url(${x})`;
+
+    // Update event title and contacts
+    const eventTitle = document.getElementById("event-title");
+    const eventContacts = document.getElementById("event-contacts");
+    const eventContacts1 = document.getElementById("event-contacts1");
+
+    eventTitle.textContent = y;
+    eventContacts.textContent = z.split(', ')[0];
+    eventContacts1.textContent = z.split(', ')[1];
+
+    // Show the event info box
+    const eventInfo = document.getElementById("event-info");
+    eventInfo.style.display = "block";
+
+   }
+  </script>
 
 <footer style="margin-top: 5px;">
   <div class="footer-content">
@@ -347,7 +722,6 @@ footer {
   </div>
   <p>&copy; 2024 Infinito</p>
 </footer>
-
 
 </body>
 </html>
