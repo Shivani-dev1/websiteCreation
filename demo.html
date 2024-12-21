@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  border:none
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 100%; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+h1 {
+  text-align: center;
+  color: orange;
+  font-size: 3em;
+  margin-bottom: 2opx;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+.background{
+background-image: url('images/texture\ image.jpg');
+position: relative;
+height: 88%;
+overflow: hidden;
+}
+/* .background::before{
+content: '';
+position: absolute;
+background: linear-gradient(to top, #ff6a3d, transparent);
+z-index: 0;
+height: 50%;
+left: 0;
+bottom: 0;
+width: 100%;
+} */
+.content{
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    color: #000;
+    text-align: center;
+}
+.content-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+    height: 50vh;
+}
+.text{
+    flex: 1;
+    max-width: 50%;
+}
+article {
+  float: left;
+  width: 100%;
+  background-color: #f1f1f1;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+.image-container{
+    flex: 1;
+    max-width: 30%;
+    text-align: center;
+}
+.image-container img {
+    width: 30%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding-top: 2opx;
+}
+.image-section{
+  width: 45%;
+  padding: 10px;
+}
+
+.image-section img{
+  width: 100%;
+  height: auto;
+
+}
+
+/* Style the footer */
+
+
+
+
+.contact-info .info {
+  max-width: 50%;
+}
+
+.contact-info .map iframe {
+  width: 300px;
+  height: 200px;
+}
+
+.contact-section {
+      display: flex;
+      background-color: #f6e6c9;
+      height: 390px;
+      gap: 80px;
+    }
+
+    .contact-info {
+      margin-bottom: 20px;
+    }
+
+    /* .info-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    } */
+
+    .info-item i {
+      color: #d2691e; /* Icon color */
+    }
+
+    /* .info-item div {
+      line-height: 1.4;
+    } */
+
+    .info-item strong {
+      font-size: 16px;
+      display: block;
+      float: inline-end;
+    }
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  color: #fff;
+}
+
+footer .footer-links img {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px;
+}
+.widgets_div {
+  border-bottom: thin #edf1f2 solid;
+  padding: 22.85px 0;
+}
+
+.widgets_div .icon_div {
+  display: inline-block;
+  margin-left: 15px;
+  vertical-align:middle;
+}
+
+.widgets_div .icon_div span i {
+  font-size: 24px;
+}
+
+.widgets_div .text_div {
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.widgets_div .text_div span {
+  color: #58666e;
+  font-size: 12px;
+}
+
+.widgets_div .text_div span+span {
+  color: #747F85;
+  font-size: 11px;
+}
+
+.span{
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f2e9;
+  color: #333;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 20px;
+  height: 45%;
+  max-width: 100%;
+  background-color: #f6e6c9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+  max-width: 45%;
+}
+
+.contact-info h2 {
+  color: #d4a36f;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+.contact-info a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.map iframe {
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #333;
+  color: #fff;
+  margin-top: 5px;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+
+</style>
+</head>
+<body>
+
+
+<div class="background">
+    <div class="content">
+        <h1>WELCOME TO INFINITO</h1>
+        <div class="content-container">
+            <div class="text">
+        <p>Infinito is the annual sports fest of IIT Patna.<br> Once a humble initiative, after just nine editions, </br><br>Infinito has already 
+            grown into the biggest and most awaited sports fest of Bihar.</br> It is an endeavor to ensure that no talent goes unnoticed.
+          </p>
+          </div>
+          <div class="image-container">
+          <img src="images/infinity.jpg" alt="Infinito collage">
+          </div>
+          </div>
+          </div>
+</div>
+
+
+</div>
+
+
+
+  <div class="contact-container">
+    <div class="contact-info">
+      <h2>Contact Info</h2>
+      <span><i class="fas fa-map-marker-alt" style="padding-right: 5px; color: #d2691e;"></i><strong>Address</strong></span><br>
+      <span class="span">IIT Patna, Bihta, Patna, Bihar</span><br>
+      <span><i class="fa fa-solid fa-phone" style="padding-right: 5px; color: #d2691e;"></i><strong>PHONE</strong></span><br>
+      <span class="span">+91 9302886207</span><br>
+      <span><i class="fas fa-envelope" style="padding-right: 5px; color: #d2691e;"></i><strong>Email</strong> </span><br>
+        <a href="mailto:infinito@iitp.ac.in" class="span">infinito@iitp.ac.in</a>
+    </div>
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.2906337067646!2d85.0901051145386!3d25.5374799837455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58fe6bdaaaab%3A0x89b9705a0f245ebd!2sIIT%20Patna!5e0!3m2!1sen!2sin!4v1639110000000!5m2!1sen!2sin"
+        width="400"
+        height="300"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+
+<footer style="margin-top: 5px;">
+  <div class="footer-content">
+    <p>Everyone has the <strong>FIRE</strong> but the <strong>CHAMPIONS</strong> know when to ignite the spark.</p>
+    <div class="footer-links">
+      <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+      <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+      <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+    </div>
+  </div>
+  <p>&copy; 2024 Infinito</p>
+</footer>
+
+
+</body>
+</html>
