@@ -315,7 +315,19 @@ footer {
   max-width: 100%;
   object-fit: cover;
   height: 100vh;
+  animation: rotate-logo 0.6s infinite linear;
 }
+
+/* @keyframes rotate-logo {
+  0%{
+    transform: rotate(0deg) scale(1.0);
+    filter: brightness(0.8) contrast(1.2);
+  }
+  100%{
+    transform: rotate(1deg)scale(1.0);
+    filter: brightness(0.8) contrast(1.2);
+  }
+} */
 
 .text-overlay {
   position: absolute;
@@ -479,7 +491,8 @@ footer {
   </header>
   <section class="hero-section">
     <div class="hero-content">
-      <img src="images/infinityy.png" alt="Infinity Loop" class="hero-image">
+      <img src="images/infinityy.png" alt="Infinity Loop" class="hero-image" onmouseover="this.style.transform='scale(1.0)rotate(180deg)';this.style.filter='brightness(1)contrast(1.2)'"
+      onmouseout="this.style.transform='scale(1)rotate(0deg)';this.style.filter='brightness(1)contrast(1)'">>
       <div class="text-overlay">
         <h1>INFINITO</h1>
         <h2>2024</h2>
