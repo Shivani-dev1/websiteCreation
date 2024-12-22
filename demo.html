@@ -439,7 +439,10 @@ footer {
 }
 .event-info {
   color: #f0f0f0;
-  padding: 20px;
+  padding-top: 2px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
   border-radius: 12px;
   box-shadow: 0 8px 26px #00000074;
   text-align: center;
@@ -516,9 +519,9 @@ footer {
       <div class="item" style="--position: 7"><img src="images/dragon_7.jpg" alt="dragon_7" onclick="onPressImage('images/dragon_7.jpg', 'dragon_7', 'Ritesh: 9876543210, Akhilesh: 9404549742')"></div>
       <div class="item" style="--position: 8"><img src="images/dragon_8.jpg" alt="dragon_8" onclick="onPressImage('images/dragon_8.jpg', 'dragon_8', 'Ritesh: 9876543210, Akhilesh: 9404549742')"></div>
       <div class="item" style="--position: 9"><img src="images/dragon_9.jpg" alt="dragon_9" onclick="onPressImage('images/dragon_9.jpg', 'dragon_9', 'Ritesh: 9876543210, Akhilesh: 9404549742')"></div>
-      <div class="item" style="--position: 10"><img src="images/dragon_10.jpg" alt=""></div>
+      <div class="item" style="--position: 10"><img src="images/dragon_10.jpg" alt="dragon_10" onclick="onPressImage('images/dragon_10.jpg','dragon_10', 'Ritesh: 9876543210, Akhilesh: 9404549742')"></div>
   </div>
-  <div class="content">
+  <!-- <div class="content">
       <h1 data-content="CSS ONLY">
           CSS ONLY
       </h1>
@@ -526,31 +529,27 @@ footer {
           <h2>LUN DEV</h2>
           <p><b>Web Design</b></p>
           <p>
-              Subscribe to the channel to watch many interesting videos
+              hello world
           </p>
       </div>
       <div class="model"></div>
-  </div>
+  </div> -->
 </div>
 
 <div id="event-info" class="event-info" style="display: none;">
-  <h1 id="event-title" style="display: block;
-  font-size: 2em;
-  margin-block-start: .67em;
-  margin-block-end: .67em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-weight: 700;
-  unicode-bidi: isolate;"></h1>
+  <h2 id="event-title" style="display: block;
+  font-size: 2em;font-size: 24px;
+  margin-bottom: 15px;"></h2>
   <div class="button1" style="display: flex;
   justify-content: center;
   margin-top: 20px;
+  margin-bottom: 15px;
   flex-wrap: wrap;">
  <a href="https://forms.gle/QVdqD7r1RRkX9xkL6" class="_workButton_1cqbm_315" target="_blank" rel="noopener noreferrer" style="padding: 1em 1.5em;
  border: none;
  outline: none;
  margin: 2px;
- font-weight: 700;
+ font-weight: 20;
  font-size: large;
  font-family: Inter,sans-serif;
  color: #fff;
@@ -575,7 +574,7 @@ footer {
 border: none;
 outline: none;
 margin: 2px;
-font-weight: 700;
+font-weight: 20;
 font-size: large;
 font-family: Inter,sans-serif;
 color: #fff;
@@ -594,14 +593,13 @@ background-size: 200% 200%;
 animation: _gradient-rotation_1cqbm_1 5s infinite linear;
 transition: all .3s ease;
 text-decoration: none;
-">view RuleBook</a>
+">View RuleBook</a>
   </div>
-  <div class="contact" style="padding: 1em 1.5em;
+  <div class="contact" style="padding: 1em 0.5em;
   border: none;
   outline: none;
-  margin: 2px;
-  font-weight: 700;
-  font-size: large;
+  margin: 0.5px;
+  font-weight: 20;
   font-family: Inter,sans-serif;
   color: #fff;
   background: #111;
@@ -615,22 +613,20 @@ text-decoration: none;
   -webkit-user-select: none;
   touch-action: manipulation;
   background-image: linear-gradient(45deg,rgb(102, 94, 86),rgb(64, 46, 46),#5c5956,#3c3837);
-  background-size: 200% 200%;
   animation: _gradient-rotation_1cqbm_1 5s infinite linear;
   transition: all .3s ease;
   text-decoration: none;">
-      <p>Point of Contacts:</p>
+      <h3 style="margin: 0 0 10px 0;">Point of Contacts:</h3>
       <div style="display: flex;
       flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
+      justify-content: center;
+      align-items: center;
       font-weight: 20;">
       <p id="event-contacts" style="font-size: 1.2rem;
-      line-height: 1.6;
-      color: #fff;"></p>
+      color: #fff;justify-content: center;
+      align-items: center;margin: 5px 0;"></p>
        <p id="event-contacts1" style="font-size: 1.2rem;
-       line-height: 1.6;
-       color: #fff;"></p>
+       color: #fff;margin: 5px 0;"></p>
       </div>
   </div>
 </div>
