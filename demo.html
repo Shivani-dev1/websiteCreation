@@ -13,30 +13,9 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-image:
-            repeating-linear-gradient(
-                to right, transparent 0 100px,
-                #25283b22 100px 101px
-            ),
-            repeating-linear-gradient(
-                to bottom, transparent 0 100px,
-                #25283b22 100px 101px
-            );
+  
 }
-body::before{
-            position: absolute;
-            width: min(1400px, 90vw);
-            top: 10%;
-            left: 50%;
-            height: 90%;
-            transform: translateX(-50%);
-            content: '';
-            background-image: url(images/bg.png);
-            background-size: 100%;
-            background-repeat: no-repeat;
-            background-position: top center;
-            pointer-events: none;
-        }
+
 * {
   box-sizing: border-box;
   border:none
@@ -188,18 +167,7 @@ body, html {
       float: inline-end;
     }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #000;
-  color: #fff;
-}
 
-footer .footer-links img {
-  width: 20px;
-  height: 20px;
-  margin: 0 10px;
-}
 .widgets_div {
   border-bottom: thin #edf1f2 solid;
   padding: 22.85px 0;
@@ -241,13 +209,7 @@ footer .footer-links img {
   overflow: hidden;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f7f2e9;
-  color: #333;
-}
+
 
 .contact-container {
   display: flex;
@@ -287,13 +249,7 @@ body {
   border-radius: 8px;
 }
 
-footer {
-  text-align: center;
-  padding: 10px 0;
-  background-color: #333;
-  color: #fff;
-  margin-top: 5px;
-}
+
 
 /* Hero Section */
 .hero-section {
@@ -308,6 +264,7 @@ footer {
 .hero-content {
   position: relative;
   text-align: center;
+  width: 100%;
 }
 
 .hero-image {
@@ -340,12 +297,12 @@ footer {
 .text-overlay h1 {
   margin-bottom: 0; /* Remove gap below */
   text-transform: uppercase;
-  color: #fff;
+  color: #dd8125;
 }
 
 .text-overlay h2 {
   margin-top: 0; /* Remove gap above */
-  color: #f5f1ed; /* Golden color */
+  color: #dd8125; /* Golden color */
 }
 
 .cta-button {
@@ -369,19 +326,25 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 50px;
+  padding: 15px 15px;
   background-color: #2a2929d7; /* Dark background for the navbar */
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
+  height: 5%;
 }
 
-.logo a {
+/* .logo a {
+  padding-right: 200px;
   font-size: 2rem;
-  color: orange; /* Matches the infinity logo color */
+  color: orange; 
   text-decoration: dotted;
   font-weight: bold;
+} */
+
+.logo img{
+  padding-left: 5px;
 }
 
 .nav-links {
@@ -464,6 +427,198 @@ footer {
   border: 2px solid rgb(71,25,2);
 }
 
+/* .slider-container {
+  width: 100%;
+  overflow: hidden;
+  background-image: url(images/dragon_1.jpg);
+  padding: 20px;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between slides */
+/* } */
+
+/* .slide {
+  flex: 0 0 auto; 
+  width: 150px; 
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 2px solid #fff;
+}  */
+
+.background1 {
+  background: url('images/athletics2.jpg') no-repeat center center/cover;
+  width: 100%;
+  height: 180%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.events-container1 {
+  position: absolute;
+  top: 10%;
+  width: 80%;
+  text-align: center;
+}
+
+.events-title1 {
+  top:10%;
+  margin-top: 1px;
+  color: #edf1f2;
+
+}
+
+.slider1 {
+  display: flex;
+  flex-wrap: wrap; /* Wrap items to the next row */
+  justify-content: center; /* Center-align items in each row */
+  gap: 15px; /* Space between images */
+}
+
+.event1 {
+  flex: 0 1 calc(25% - 15px); /* Each image takes 25% of the row width */
+  margin: 10px 0; /* Add vertical margin */
+  box-sizing: border-box;
+}
+
+.event1 img {
+  width: 260px;
+  height: 200px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.details-container1 {
+  position: absolute;
+  top: 55%;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.details-container1 h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.details-container1 .btn {
+  background: #ff4500;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.details-container1 .btn:hover {
+  background: #ff6347;
+}
+
+.details-container1 p {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 100%;
+  margin: 10px 10px;
+  padding: 0 20px;
+  flex-wrap: wrap;
+  gap: 29.9px;
+
+}
+
+.footer-section {
+  flex: 1 1 30%; /* Ensure equal distribution */
+  margin: 10px;
+}
+
+.footer-section p {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.highlight {
+  font-weight: bold;
+}
+
+.follow-us {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.social-icons a img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.icon-phone,
+.icon-email {
+  margin-right: 8px;
+}
+
+.small-text {
+  padding: 37px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 100;
+  opacity: .75;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 5px 0;
+}
+
+ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+ul li a:hover {
+  color: #ff4500;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid #eaeaea;
+  margin-top: 10px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 100;
+  opacity: .75;
+}
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 
 </style>
@@ -472,7 +627,7 @@ footer {
   <header>
     <nav class="navbar">
       <div class="logo">
-        <a href="#">∞</a>
+        <img src="images/rectangular_logo[1].png" width="30px" height="30px">
       </div>
     
       <ul class="nav-links" id="nav-links">
@@ -491,11 +646,11 @@ footer {
   </header>
   <section class="hero-section">
     <div class="hero-content">
-      <img src="images/infinityy.png" alt="Infinity Loop" class="hero-image" onmouseover="this.style.transform='scale(1.0)rotate(180deg)';this.style.filter='brightness(1)contrast(1.2)'"
+      <img src="images/college logo.jpg" alt="Infinity Loop" class="hero-image" onmouseover="this.style.transform='scale(1.0)rotate(0deg)';this.style.filter='brightness(1)contrast(1.2)'"
       onmouseout="this.style.transform='scale(1)rotate(0deg)';this.style.filter='brightness(1)contrast(1)'">>
       <div class="text-overlay">
-        <h1>INFINITO</h1>
-        <h2>2024</h2>
+        <h1>GEC BUXAR'S</h1>
+        <h2>2K25</h2>
         <button class="cta-button" onclick="onEvent()">Explore Now</button>
       </div>
     </div>
@@ -521,7 +676,42 @@ footer {
 
 </div>
 
-<div class="banner">
+
+
+<div class="background1" id="background1">
+  <div class="events-container1">
+    <h1 class="events-title1">EVENTS</h1>
+    <div class="slider1">
+     
+      <div class="event1"><img src="images/athletics.jpg" alt="Event 1" onclick="onPressImage('images/athletics2.jpg', 'Athletics Championship', 'RAJNISH KUMAR:  9801254324, KUMAR HEMANT:  9304451084, SUSHANT KUMAR:  8757155992, PINTU KUMAR:  7563016160, AKSHAY KUMAR:  9153045116, TARU KUMARI:   6200782707, NEHA KUMARI:  6200661608')"></div>
+      <div class="event1"><img src="images/badminton5.webp.jpg" alt="Event 2" onclick="onPressImage('images/badminton5.webp.jpg', 'Badminton Championship', 'LOKESH SHIVAM: 9142386598, RITESH RANJAN: 8102664797, SADIA KHANAM: 7761081454')"></div>
+      <div class="event1"><img src="images/carrom.webp" alt="Event 3" onclick="onPressImage('images/carrom.webp', 'Carrom Championship', 'KRISH RAJ: 9835848502, JAY PRAKASH PANDEY: 7256879062, ANJALI KUMARI: 8789758208')"></div>
+      <div class="event1"><img src="images/chess-CJlY9TWO.png" alt="Event 4" onclick="onPressImage('images/chess-CJlY9TWO.png', 'Chess Championship', 'SATYAM KUMAR: 9341526497, ANURAG KUMAR: 8271289284, ANSHIKA SINHA:7479553886')"></div>
+     
+      <div class="event1"><img src="images/cricket-DlJWfze2.png" alt="Event 5" onclick="onPressImage('images/cricket-DlJWfze2.png', 'Cricket Championship', 'ABHINANDAN KUMAR GAUTAM: 9334561284, PRASHANT KUMAR:  6202049535')"></div>
+      <div class="event1"><img src="images/volleyball-DBeG2px1.png" alt="Event 6" onclick="onPressImage('images/volleyball-DBeG2px1.png', 'Volleyball Championship', 'KRISH RAJ: 9835848502, JAY PRAKASH PANDEY: 7256879062, ANJALI KUMARI:8789758208')"></div>
+      <div class="event1"><img src="images/kabbadi-CxgVQypD.png" alt="Event 7" onclick="onPressImage('images/kabbadi-CxgVQypD.png', 'Kabbadi Championship', 'ANKIT KUMAR: 9334357710, SHASHWAT VATS: 9631554169, SIKHA RANI:6207525876')"></div>
+      <div class="event1"><img src="images/tabletennis-BWnd6wmF.jpg" alt="Event 8" onclick="onPressImage('images/tabletennis-BWnd6wmF.jpg', 'Table Tennis Championship', 'KRISH RAJ: 9835848502, SAURAV KUMAR SINHA: 7870784659, ISHA KUMARI:7091341504')"></div>
+   
+    </div>
+  </div>
+  <div class="details-container1">
+    <h2 id="event-title1" style="color: #edf1f2;">Athletics Championship</h2>
+    <button class="btn" onclick="onPressRegister()">Register Now</button>
+    <button class="btn" onclick="onPressViewRuleBook()">View Rulebook</button>
+    <p style="color: #edf1f2; padding-bottom: 2px;">Point of Contact:</p>
+    <p style="color: #edf1f2;" id="contact1">RAJNISH KUMAR :  9801254324</p>
+    <p style="color: #edf1f2; padding-bottom: 2px;" id="contact2">KUMAR HEMANT : 9304451084</p>
+    <p style="color: #edf1f2; padding-bottom: 2px;" id="contact3">SUSHANT KUMAR :  8757155992</p>
+    <p style="color: #edf1f2; padding-bottom: 2px;" id="contact4">PINTU KUMAR : 7563016160</p>
+    <p style="color: #edf1f2; padding-bottom: 2px;" id="contact5">AKSHAY KUMAR : 9153045116</p>
+    <p style="color: #edf1f2; padding-bottom: 2px;" id="contact6">TARU KUMARI :  6200782707</p>
+    <p style="color: #edf1f2; padding-bottom: 2px;" id="contact7">NEHA KUMARI :  6200661608</p>
+ 
+  </div>
+</div>
+
+<!-- <div class="banner">
   <div class="slider" style="--quantity: 10">
       <div class="item" style="--position: 1"><img src="images/dragon_1.jpg" alt="dragon_1" onclick="onPressImage('images/dragon_1.jpg', 'dragon_1', 'Ritesh: 9876543210, Akhilesh: 9404549742')"></div>
       <div class="item" style="--position: 2"><img src="images/dragon_2.jpg" alt="dragon_2" onclick="onPressImage('images/dragon_2.jpg', 'dragon_2', 'Ritesh: 9876543210, Akhilesh: 9404549742')"></div>
@@ -534,22 +724,23 @@ footer {
       <div class="item" style="--position: 9"><img src="images/dragon_9.jpg" alt="dragon_9" onclick="onPressImage('images/dragon_9.jpg', 'dragon_9', 'Ritesh: 9876543210, Akhilesh: 9404549742')"></div>
       <div class="item" style="--position: 10"><img src="images/dragon_10.jpg" alt="dragon_10" onclick="onPressImage('images/dragon_10.jpg','dragon_10', 'Ritesh: 9876543210, Akhilesh: 9404549742')"></div>
   </div>
-  <!-- <div class="content">
-      <h1 data-content="CSS ONLY">
-          CSS ONLY
-      </h1>
-      <div class="author">
-          <h2>LUN DEV</h2>
-          <p><b>Web Design</b></p>
-          <p>
-              hello world
-          </p>
-      </div>
-      <div class="model"></div>
-  </div> -->
-</div>
+  
+</div> -->
 
-<div id="event-info" class="event-info" style="display: none;">
+<!-- <div class="slider-container">
+  <div class="slider">
+    <div class="slide"><img src="images/dragon_1.jpg" alt="Image 1" onclick="onPressImage('images/dragon_1.jpg', 'dragon_1', 'Ritesh: 9876543210, Akhilesh: 9404549742')"></div>
+    <div class="slide"><img src="images/dragon_2.jpg" alt="Image 2" onclick="onPressImage('images/dragon_2.jpg', 'dragon_2', 'Ritesh: 9876543210, Akhilesh: 9404549742')"></div>
+    <div class="slide"><img src="images/dragon_3.jpg" alt="Image 3" onclick="onPressImage('images/dragon_3.jpg', 'dragon_3', 'Ritesh: 9876543210, Akhilesh: 9404549742')"></div>
+    <div class="slide"><img src="images/dragon_5.jpg" alt="Image 4" onclick="onPressImage('images/dragon_5.jpg', 'dragon_5', 'Ritesh: 9876543210, Akhilesh: 9404549742')"></div>
+    <div class="slide"><img src="images/dragon_7.jpg" alt="Image 5" onclick="onPressImage('images/dragon_7.jpg', 'dragon_7', 'Ritesh: 9876543210, Akhilesh: 9404549742')"></div>
+  
+  </div>
+</div> -->
+
+
+
+<!-- <div id="event-info" class="event-info" style="display: flex;">
   <h2 id="event-title" style="display: block;
   font-size: 2em;font-size: 24px;
   margin-bottom: 15px;"></h2>
@@ -642,16 +833,18 @@ text-decoration: none;
        color: #fff;margin: 5px 0;"></p>
       </div>
   </div>
-</div>
+</div> -->
   <div class="contact-container">
     <div class="contact-info">
       <h2>Contact Info</h2>
-      <span><i class="fas fa-map-marker-alt" style="padding-right: 5px; color: #d2691e;"></i><strong>Address</strong></span><br>
-      <span class="span">IIT Patna, Bihta, Patna, Bihar</span><br>
-      <span><i class="fa fa-solid fa-phone" style="padding-right: 5px; color: #d2691e;"></i><strong>PHONE</strong></span><br>
-      <span class="span">+91 9302886207</span><br>
-      <span><i class="fas fa-envelope" style="padding-right: 5px; color: #d2691e;"></i><strong>Email</strong> </span><br>
-        <a href="mailto:infinito@iitp.ac.in" class="span">infinito@iitp.ac.in</a>
+      <p style="padding-right: 28px;"> <i class="fas fa-map-marker-alt" style="padding: 10px;color: #d2691e;"></i><strong>ADDress</strong><br>
+        <span style="padding:35px">Mahdah, Itarhi Road, P.O.-Gajadhar Ganj,</span><br>
+        <span style="padding:35px">Near Police Line BUXAR,</span><br>
+        <span style="padding:35px">PinCode : 802103</span></p>
+      <span><i class="fa fa-solid fa-phone" style="padding:10px; color: #d2691e;"></i><strong>PHONE</strong></span><br>
+      <span style="padding:35px;">060183297194</span><br>
+      <span><i class="fas fa-envelope" style="padding: 10px; color: #d2691e;"></i><strong>Email</strong> </span><br>
+        <a href="mailto:infinito@iitp.ac.in" style="padding:35px;">gecbuxar1@gmail.com</a>
     </div>
     <div class="map">
       <iframe
@@ -665,7 +858,6 @@ text-decoration: none;
     </div>
   </div>
 
-  
   <script>
     function showSideBar(){
       const sidebar = document.querySelector('.sidebar');
@@ -679,7 +871,7 @@ text-decoration: none;
     // const heroSection = document.querySelector('.background');
     // heroSection.style.display= 'flex';
     // window.open("https://media.istockphoto.com/id/184233907/photo/infinite-light.jpg?s=612x612&w=0&k=20&c=bO5GBmJUdRyaFmnsRyk-etEtMjIHKZRFn-T5jGwhq2Q=")
-    const banner = document.querySelector('.banner');
+    const banner = document.querySelector('.background1');
     banner.style.display= 'none';
     const sidebar = document.querySelector('.background');
     sidebar.style.display= 'flex';
@@ -690,7 +882,7 @@ text-decoration: none;
   }
 
    function onEvent(){
-    const banner = document.querySelector('.banner');
+    const banner = document.querySelector('.background1');
     banner.style.display= 'flex';
     const sidebar = document.querySelector('.background');
     sidebar.style.display= 'none';
@@ -702,34 +894,88 @@ text-decoration: none;
 
    function onPressImage(x, y, z){
     debugger;
-    document.body.style.backgroundImage = `url(${x})`;
+    const background = document.getElementById('background1');
+  background.style.backgroundImage = `url('${x}')`;
 
     // Update event title and contacts
-    const eventTitle = document.getElementById("event-title");
-    const eventContacts = document.getElementById("event-contacts");
-    const eventContacts1 = document.getElementById("event-contacts1");
-
+    const eventTitle = document.getElementById("event-title1");
+    const eventContacts = document.getElementById("contact1");
+    const eventContacts1 = document.getElementById("contact2");
+    const eventContacts2 = document.getElementById("contact3");
+    const eventContacts3 = document.getElementById("contact4");
+    const eventContacts4 = document.getElementById("contact5");
+    const eventContacts5 = document.getElementById("contact6");
+    const eventContacts6 = document.getElementById("contact7");
     eventTitle.textContent = y;
     eventContacts.textContent = z.split(', ')[0];
     eventContacts1.textContent = z.split(', ')[1];
+    eventContacts2.textContent = z.split(', ')[2];
+    eventContacts3.textContent = z.split(', ')[3];
+    eventContacts4.textContent = z.split(', ')[4];
+    eventContacts5.textContent = z.split(', ')[5];
+    eventContacts6.textContent = z.split(', ')[6];
 
     // Show the event info box
-    const eventInfo = document.getElementById("event-info");
-    eventInfo.style.display = "block";
+    // const eventInfo = document.getElementById("details-container1");
+    // eventInfo.style.display = "block";
+
+   }
+
+   function onPressRegister(){
+    window.open("https://docs.google.com/forms/d/1jzhrwQ2D_L6Nkz9--GmuszRXYCOennkzOPXa54mslAs/edit");
+   }
+
+   function onPressViewRuleBook(){
+    window.open("https://docs.google.com/forms/d/1jzhrwQ2D_L6Nkz9--GmuszRXYCOennkzOPXa54mslAs/edit");
 
    }
   </script>
 
-<footer style="margin-top: 5px;">
-  <div class="footer-content">
-    <p>Everyone has the <strong>FIRE</strong> but the <strong>CHAMPIONS</strong> know when to ignite the spark.</p>
-    <div class="footer-links">
-      <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-      <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
-      <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Left Section -->
+    <div class="footer-section">
+      <p>
+        Everyone has the <span class="highlight">FIRE</span> but the 
+        <span class="highlight">CHAMPIONS</span> know when to ignite the spark
+      </p>
+      <p class="follow-us">FOLLOW US</p>
+      <div class="social-icons">
+        <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+        <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+        <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+        <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+        <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
+      </div>
+    </div>
+
+    <!-- Middle Section -->
+    <div class="footer-section">
+      <p> <i class="fas fa-map-marker-alt" style="padding: 10px;"></i> Mahdah, Itarhi Road, P.O.-Gajadhar Ganj,<br>
+        <span style="padding:37px">Near Police Line BUXAR,</span><br>
+        <span style="padding:37px">PinCode : 802103</span></p>
+      <p>
+        <i class="fa fa-solid fa-phone" style="padding: 10px;"></i> 060183297194<br>
+        <span class="small-text">Give us a call</span>
+      </p>
+      <p>
+        <i class="fas fa-envelope" style="padding: 10px;"></i> gecbuxar1@gmail.com<br>
+        <span class="small-text">Mail us here</span>
+      </p>
+    </div>
+
+    <!-- Right Section -->
+    <div class="footer-section">
+      <p><strong>USEFUL LINKS</strong></p>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Events</a></li>
+       </ul>
     </div>
   </div>
-  <p>&copy; 2024 Infinito</p>
+  <div class="footer-bottom">
+    <h2 style="color: white;font-weight: bold;">Copyright © 2024 Infinito</h2>
+  </div>
 </footer>
 
 </body>
