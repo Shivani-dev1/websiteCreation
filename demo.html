@@ -11,12 +11,9 @@
 
 <style>
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  
-}
-
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   border:none
 }
@@ -38,20 +35,21 @@ body {
 /* Style the header */
 
 
-h1 {
-  text-align: center;
-  color: orange;
-  font-size: 3em;
-  margin-bottom: 2opx;
-}
 
 /* Create two columns/boxes that floats next to each other */
 
 .background{
-background-image: url('images/texture\ image.jpg');
-position: relative;
-height: 88%;
-overflow: hidden;
+ background-image: url('images/texture\ image.jpg');
+ z-index: 2;
+  display: flex;
+  width: 100vw;
+  height: 50vh;
+  place-items: center;
+  gap: 15%;
+  height: 100vh;
+  flex-direction: column;
+  /* background-image: url(/assets/aboutUsbg-CEFkOt5G.png); */
+  background-repeat: round;
 }
 /* .background::before{
 content: '';
@@ -71,16 +69,20 @@ width: 100%;
     text-align: center;
 }
 .content-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    text-align: left;
-    height: 50vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 .text{
-    flex: 1;
-    max-width: 50%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  line-height: 1.5rem;
+}
+.textinfo{
+  width: 80%;
+  font-size: 1rem;
+  color: #000;
 }
 article {
   float: left;
@@ -100,16 +102,23 @@ body, html {
     padding: 0;
     height: 100%;
     font-family: Arial, sans-serif;
+    overflow-x: hidden;
 }
 .image-container{
-    flex: 1;
-    max-width: 30%;
-    text-align: center;
+  width: 50%;
+  position: relative;
 }
 .image-container img {
-    width: 30%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    padding-top: 2opx;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.imagesec{
+  position: absolute;
+  width: 50%;
+  left: 24%;
 }
 .image-section{
   width: 45%;
@@ -127,14 +136,6 @@ body, html {
 
 
 
-.contact-info .info {
-  max-width: 50%;
-}
-
-.contact-info .map iframe {
-  width: 300px;
-  height: 200px;
-}
 
 .contact-section {
       display: flex;
@@ -143,110 +144,65 @@ body, html {
       gap: 80px;
     }
 
-    .contact-info {
+.contact-info {
       margin-bottom: 20px;
-    }
-
-    /* .info-item {
-      display: flex;
-      align-items: center;
-      margin-bottom: 15px;
-    } */
-
-    .info-item i {
-      color: #d2691e; /* Icon color */
-    }
-
-    /* .info-item div {
-      line-height: 1.4;
-    } */
-
-    .info-item strong {
-      font-size: 16px;
-      display: block;
-      float: inline-end;
-    }
-
-
-.widgets_div {
-  border-bottom: thin #edf1f2 solid;
-  padding: 22.85px 0;
 }
-
-.widgets_div .icon_div {
-  display: inline-block;
-  margin-left: 15px;
-  vertical-align:middle;
+.iconaddress{
+display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
 }
-
-.widgets_div .icon_div span i {
-  font-size: 24px;
-}
-
-.widgets_div .text_div {
-  display: inline-block;
-  margin-left: 10px;
-  vertical-align: middle;
-}
-
-.widgets_div .text_div span {
-  color: #58666e;
-  font-size: 12px;
-}
-
-.widgets_div .text_div span+span {
-  color: #747F85;
-  font-size: 11px;
-}
+    
 
 .span{
   margin-bottom: 20px;
   padding: 20px;
 }
 
-._container_qnlyk_17 {
-  background-color: #000;
-  overflow: hidden;
-}
 
 
 
 .contact-container {
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  padding: 20px;
-  height: 45%;
-  max-width: 100%;
-  background-color: #f6e6c9;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: wheat;
+  flex-wrap: wrap;
 }
 
 .contact-info {
-  max-width: 45%;
+  flex: 1;
+  margin-right: 2rem;
+  text-align: left;
 }
 
 .contact-info h2 {
-  color: #d4a36f;
-  margin-bottom: 20px;
+  font-size: 2rem;
+  margin-top: 50px;
+  text-align: center;
+  font-weight: 600;
 }
 
-.contact-info p {
-  font-size: 16px;
-  margin: 8px 0;
+.infotext{
+  margin: 0;
 }
 
-.contact-info a {
-  color: #007bff;
-  text-decoration: none;
-}
 
-.contact-info a:hover {
-  text-decoration: underline;
-}
 
-.map iframe {
+/* .map iframe {
   border-radius: 8px;
+} */
+.map{
+  flex: 1;
+  min-width: 300px;
+  margin-top: 1rem;
+}
+.contactText{
+  margin-bottom: 1rem;
+  font-size: 2.7em;
+  font-weight: 100; 
+  font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 
@@ -326,7 +282,7 @@ body, html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 15px;
+  padding: 15px 40px;
   background-color: #2a2929d7; /* Dark background for the navbar */
   position: fixed;
   top: 0;
@@ -343,8 +299,14 @@ body, html {
   font-weight: bold;
 } */
 
-.logo img{
+/* .logo img{
   padding-left: 5px;
+} */
+
+.logo {
+  max-height: 37px;
+  max-width: 207px;
+  margin-left: -2rem;
 }
 
 .nav-links {
@@ -473,10 +435,26 @@ body, html {
 }
 
 .events-title1 {
-  top:10%;
   margin-top: 1px;
   color: #edf1f2;
+  bottom: 20%;
+  padding-bottom: 50px;
+  font-family: 'Times New Roman', Times, serif;
 
+}
+.events-title1::after {
+  content: '';
+  position: absolute;
+  width: 1;
+  height: 2px;
+  top:2;
+  bottom: 2; /* Thickness of the underline */
+  background-color: rgb(235, 24, 24); /* Color of the underline */
+  transition: width 0.3s ease; /* Smooth animation */
+}
+
+.events-title1:hover::after {
+  width: 50%; 
 }
 
 .slider1 {
@@ -490,6 +468,9 @@ body, html {
   flex: 0 1 calc(25% - 15px); /* Each image takes 25% of the row width */
   margin: 10px 0; /* Add vertical margin */
   box-sizing: border-box;
+  cursor: pointer;
+  box-shadow: 0 8px 16px #0000004d;
+  transition: transform .3s ease,box-shadow .3s ease;
 }
 
 .event1 img {
@@ -497,7 +478,11 @@ body, html {
   height: 200px;
   border-radius: 5px;
   cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #fff6,0 0 30px #ffffff4d;
+
 }
+
 
 .details-container1 {
   position: absolute;
@@ -528,6 +513,8 @@ body, html {
   background: #ff6347;
 }
 
+
+
 .details-container1 p {
   margin-top: 10px;
   font-size: 1rem;
@@ -545,7 +532,7 @@ body, html {
   align-items: flex-start;
   max-width: 100%;
   margin: 10px 10px;
-  padding: 0 20px;
+  padding: 0 2px;
   flex-wrap: wrap;
   gap: 29.9px;
 
@@ -618,16 +605,331 @@ ul li a:hover {
   font-size: 12px;
   font-weight: 100;
   opacity: .75;
+  overflow-x: hidden;
 }
+
+.events-section {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial,sans-serif;
+  background-color: #000;
+}
+
+
+
+.slider {
+  /* width: 100%;
+  height: 80vh;
+  margin: 0 auto 10px auto; 
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative; */
+  display: flex;
+  flex-wrap: wrap; /* Wrap items to the next row */
+  justify-content: center; /* Center-align items in each row */
+  gap: 10px; /* Space between images */
+}
+
+.slider-track {
+  display: flex;
+  width: calc(100% * 4); /* Number of slides */
+  animation: slide 10s linear infinite;
+}
+
+.slide {
+  /* flex: 0 0 25%;  */
+  /* Adjust this to show the number of slides */
+  flex: 0 0 500px;
+ margin: 50px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #c5ccd6;
+  box-shadow: 0 4px 15px #0003;
+  position: relative;
+  transition: transform .3s ease,box-shadow .3s ease;
+  display: flex;
+  height: 200px;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Animation for horizontal sliding */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.see-all-button {
+  background-color: black;
+  color: white;
+  border: 2px solid rgb(141, 94, 6);
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  z-index: 0;
+}
+
+.see-all-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #ffffff80;
+}
+.hover-underline {
+  position: relative; /* Allows the use of ::after */
+  display: inline-block;
+  cursor: pointer;
+}
+
+.hover-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0; /* Position at the bottom of the text */
+  width: 1;
+  height: 2px; /* Thickness of the underline */
+  background-color: white; /* Color of the underline */
+  transition: width 0.3s ease; /* Smooth animation */
+}
+
+.hover-underline:hover::after {
+  width: 100%; /* Expand the underline on hover */
+}
+
+._h2_saxkg_155{
+  font-size: 3rem;
+  font-family: a Atmospheric,sans-serif;
+  color: orange;
+  padding-bottom: 0;
+  padding-top: 50px;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+}
+._show_saxkg_231{
+  opacity: 1;
+}
+
+
+/* ._container_qnlyk_17 {
+  background-color: #000;
+  overflow: hidden;
+}
+.nav {
+  width: 100%;
+  background-color: #27272a6a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  font-family: Raleway,sans-serif;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 4;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  padding: 0 1rem;
+}
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  padding-left: 20px;
+}
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+.desktop-menu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 70%;
+}
+._parent_n46et_9 {
+  width: 100vw;
+  background-color: #010001;
+  height: 50vh;
+  overflow: hidden;
+}
+._img_n46et_59{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+}
+@media (min-width: 930px) {
+  ._title_n46et_291 {
+    height: 100vh;
+    display: flex;
+    place-items: center;
+    position: relative;
+    background-color: #000;
+  }
+}
+@media (min-width: 930px) {
+  ._imgparent_n46et_275 {
+    width: 50vw;
+    aspect-ratio: .5;
+    background-size: 45%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+._tit_n46et_249 {
+  z-index: 12;
+  color: #fff;
+}
+._img_n46et_59{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+._atmos_n46et_259 {
+  font-size: 100px;
+  font-family: a Atmospheric,sans-serif;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-block-start: .67em;
+  margin-block-end: .67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: 700;
+  unicode-bidi: isolate;
+}
+._bupal_n46et_109 {
+  display: flex;
+}
+._cool_n46et_117{
+  margin-right: 1em;
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  position: relative;
+  color: #f0f0f0;
+  cursor: pointer;
+  z-index: 1;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+._cool_n46et_117::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all .4s;
+  transform: translate(0);
+  width: 100%;
+  height: 100%;
+  background: #28282d;
+  border-radius: 10px;
+}
+._cool_n46et_117::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all .4s;
+  transform: translate(5px,5px);
+  width: 0px;
+  height: 0px;
+  background: #ffffff15;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 10px;
+} */
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 
 </style>
 </head>
 <body>
+
+
+  <!-- <div class="_container_qnlyk_17"> -->
+    <!-- <div class="nav">
+      <a href="/" class="logo-link">
+        <img src="images/rectangular_logo[1].png" class="logo" style="margin-top: 5px; top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;">
+        </a>
+        <div class="menu-icon">☰</div>
+        <div class="desktopmenu">
+          <div class="dropdown"></div>
+          <a href="/">Home</a>
+          <a href="/">Events</a>
+
+          </div>
+      </div>
+      <div class="_parent_n46et_9">
+        <img  class="_img_n46et_59" src="images/college logo.jpg" alt="Infinity Loop"  onmouseover="this.style.transform='scale(1.0)rotate(0deg)';this.style.filter='brightness(1)contrast(1.2)'">
+       
+      
+      <div class="_tit_n46et_291">
+        <div class="_imgparent_n46et_275">
+        <img  class="_img_n46et_59" src="images/college logo.jpg" alt="Infinity Loop" class="hero-image" onmouseover="this.style.transform='scale(1.0)rotate(0deg)';this.style.filter='brightness(1)contrast(1.2)'">
+
+        </div>
+        <div class="_tit_n46et_249">
+        <div>
+          <h1 class="_atmos_n46et_259">INFINITO</h1>
+          <h1 class="_atmos_n46et_259">2024</h1>
+
+          </div>
+          <div class="_bupal_n46et_109">
+            <a class="_cool_n46et_117" href="/">
+             <span style="z-index: 1;">Explore Now</span>
+            </a>
+    </div>
+  </div>
+</div>
+</div> -->
   <header>
     <nav class="navbar">
       <div class="logo">
-        <img src="images/rectangular_logo[1].png" width="30px" height="30px">
+        <img class="_img_n46et_59" src="images/rectangular_logo[1].png" width="30px" height="30px">
       </div>
     
       <ul class="nav-links" id="nav-links">
@@ -644,7 +946,7 @@ ul li a:hover {
     
     </nav>
   </header>
-  <section class="hero-section">
+  <div class="hero-section">
     <div class="hero-content">
       <img src="images/college logo.jpg" alt="Infinity Loop" class="hero-image" onmouseover="this.style.transform='scale(1.0)rotate(0deg)';this.style.filter='brightness(1)contrast(1.2)'"
       onmouseout="this.style.transform='scale(1)rotate(0deg)';this.style.filter='brightness(1)contrast(1)'">>
@@ -654,44 +956,63 @@ ul li a:hover {
         <button class="cta-button" onclick="onEvent()">Explore Now</button>
       </div>
     </div>
-  </section>
   </div>
+  
  
 <div class="background">
-    <div class="content">
-        <h1>WELCOME TO INFINITO</h1>
+    <div>
+        <!-- <h2  style="text-align: center;
+        color: orange;
+        font-size: 3em;
+        margin-bottom: 2opx;">WELCOME TO INFINITO</h2> -->
+        <h2 class="_h2_saxkg_155 _show_saxkg_231">WELCOME TO INFINITO</h2>
+        </div>
         <div class="content-container">
             <div class="text">
-        <p>Infinito is the annual sports fest of IIT Patna.<br> Once a humble initiative, after just nine editions, </br><br>Infinito has already 
+              <div class="textinfo">
+        <!-- <p>Infinito is the annual sports fest of IIT Patna.<br> Once a humble initiative, after just nine editions, </br><br>Infinito has already 
             grown into the biggest and most awaited sports fest of Bihar.</br> It is an endeavor to ensure that no talent goes unnoticed.
-          </p>
+          </p> -->
+          Infinito is the annual sports fest of IIT Patna. Once a humble initiative, after just nine editions, Infinito has already grown into the biggest and most awaited sports fest of Bihar. It is an endeavor to ensure that no talent goes unnoticed. Through Infinito we provide people a platform where they can not only display their skills but also learn and develop the qualities of a true sportsman. Knit together are the virtues of team spirit, undying determination and zeal, and Infinito is an embodiment of them all. Infinito is a three days fest and these three days see participation from colleges all over India. With a plethora of sporting events and exhilarating cultural nights we leave no stones unturned into ensuring that these three days are filled with fun and thrill and that everyone who is a part of our ever-growing family gets to make the most beautiful of memories. Lets sweat to glory, together.
           </div>
+        </div>
           <div class="image-container">
-          <img src="images/infinity.jpg" alt="Infinito collage">
+          <img class="imagesec" src="images/infinity.jpg" alt="Infinito collage">
           </div>
           </div>
           </div>
-</div>
-
-
-</div>
 
 
 
-<div class="background1" id="background1">
+
+
+<div class="background1" id="background1" style="display: none;">
   <div class="events-container1">
-    <h1 class="events-title1">EVENTS</h1>
+    <h1 style="margin: 10px 0;
+  font-size: 2rem;position: relative;
+  cursor: pointer;
+  transition: color .3s;color: white;
+  font-size: 3.7em;font-weight: 600; font-family:Georgia, 'Times New Roman', Times, serif;" class="hover-underline">EVENTS</h1>
+    
     <div class="slider1">
      
-      <div class="event1"><img src="images/athletics.jpg" alt="Event 1" onclick="onPressImage('images/athletics2.jpg', 'Athletics Championship', 'RAJNISH KUMAR:  9801254324, KUMAR HEMANT:  9304451084, SUSHANT KUMAR:  8757155992, PINTU KUMAR:  7563016160, AKSHAY KUMAR:  9153045116, TARU KUMARI:   6200782707, NEHA KUMARI:  6200661608')"></div>
-      <div class="event1"><img src="images/badminton5.webp.jpg" alt="Event 2" onclick="onPressImage('images/badminton5.webp.jpg', 'Badminton Championship', 'LOKESH SHIVAM: 9142386598, RITESH RANJAN: 8102664797, SADIA KHANAM: 7761081454')"></div>
-      <div class="event1"><img src="images/carrom.webp" alt="Event 3" onclick="onPressImage('images/carrom.webp', 'Carrom Championship', 'KRISH RAJ: 9835848502, JAY PRAKASH PANDEY: 7256879062, ANJALI KUMARI: 8789758208')"></div>
-      <div class="event1"><img src="images/chess-CJlY9TWO.png" alt="Event 4" onclick="onPressImage('images/chess-CJlY9TWO.png', 'Chess Championship', 'SATYAM KUMAR: 9341526497, ANURAG KUMAR: 8271289284, ANSHIKA SINHA:7479553886')"></div>
+      <div class="event1"><img class="imghover"  src="images/athletics.jpg" alt="Event 1" onclick="onPressImage('images/athletics2.jpg', 'Athletics Championship', 'RAJNISH KUMAR:  9801254324, KUMAR HEMANT:  9304451084, SUSHANT KUMAR:  8757155992, PINTU KUMAR:  7563016160, AKSHAY KUMAR:  9153045116, TARU KUMARI:   6200782707, NEHA KUMARI:  6200661608')">
+      <p style="text-align: center; color: #edf1f2; padding: 2px;">Athletics</p></div>
+      <div class="event1"><img class="imghover" src="images/badminton5.webp.jpg" alt="Event 2" onclick="onPressImage('images/badminton5.webp.jpg', 'Badminton Championship', 'LOKESH SHIVAM: 9142386598, RITESH RANJAN: 8102664797, SADIA KHANAM: 7761081454')">
+        <p style="text-align: center; color: #edf1f2; padding: 2px;">Badminton</p></div>
+      <div class="event1"><img class="imghover"  src="images/carrom.webp" alt="Event 3" onclick="onPressImage('images/carrom.webp', 'Carrom Championship', 'KRISH RAJ: 9835848502, JAY PRAKASH PANDEY: 7256879062, ANJALI KUMARI: 8789758208')">
+        <p style="text-align: center; color: #edf1f2; padding: 2px;">Carrom</p></div>
+      <div class="event1"><img class="imghover" src="images/chess-CJlY9TWO.png" alt="Event 4" onclick="onPressImage('images/chess-CJlY9TWO.png', 'Chess Championship', 'SATYAM KUMAR: 9341526497, ANURAG KUMAR: 8271289284, ANSHIKA SINHA:7479553886')">
+        <p style="text-align: center; color: #edf1f2; padding: 2px;">Chess</p></div>
      
-      <div class="event1"><img src="images/cricket-DlJWfze2.png" alt="Event 5" onclick="onPressImage('images/cricket-DlJWfze2.png', 'Cricket Championship', 'ABHINANDAN KUMAR GAUTAM: 9334561284, PRASHANT KUMAR:  6202049535')"></div>
-      <div class="event1"><img src="images/volleyball-DBeG2px1.png" alt="Event 6" onclick="onPressImage('images/volleyball-DBeG2px1.png', 'Volleyball Championship', 'KRISH RAJ: 9835848502, JAY PRAKASH PANDEY: 7256879062, ANJALI KUMARI:8789758208')"></div>
-      <div class="event1"><img src="images/kabbadi-CxgVQypD.png" alt="Event 7" onclick="onPressImage('images/kabbadi-CxgVQypD.png', 'Kabbadi Championship', 'ANKIT KUMAR: 9334357710, SHASHWAT VATS: 9631554169, SIKHA RANI:6207525876')"></div>
-      <div class="event1"><img src="images/tabletennis-BWnd6wmF.jpg" alt="Event 8" onclick="onPressImage('images/tabletennis-BWnd6wmF.jpg', 'Table Tennis Championship', 'KRISH RAJ: 9835848502, SAURAV KUMAR SINHA: 7870784659, ISHA KUMARI:7091341504')"></div>
+      <div class="event1"><img class="imghover" src="images/cricket-DlJWfze2.png" alt="Event 5" onclick="onPressImage('images/cricket-DlJWfze2.png', 'Cricket Championship', 'ABHINANDAN KUMAR GAUTAM: 9334561284, PRASHANT KUMAR:  6202049535')">
+        <p style="text-align: center; color: #edf1f2; padding: 2px;">Cricket</p></div>
+      <div class="event1"><img class="imghover" src="images/volleyball-DBeG2px1.png" alt="Event 6" onclick="onPressImage('images/volleyball-DBeG2px1.png', 'Volleyball Championship', 'KRISH RAJ: 9835848502, JAY PRAKASH PANDEY: 7256879062, ANJALI KUMARI:8789758208')">
+        <p style="text-align: center; color: #edf1f2; padding: 2px;">Volleyball</p></div>
+      <div class="event1"><img class="imghover" src="images/kabbadi-CxgVQypD.png" alt="Event 7" onclick="onPressImage('images/kabbadi-CxgVQypD.png', 'Kabbadi Championship', 'ANKIT KUMAR: 9334357710, SHASHWAT VATS: 9631554169, SIKHA RANI:6207525876')">
+        <p style="text-align: center; color: #edf1f2; padding: 2px;">Kabaddi</p></div>
+      <div class="event1"><img class="imghover" src="images/tabletennis-BWnd6wmF.jpg" alt="Event 8" onclick="onPressImage('images/tabletennis-BWnd6wmF.jpg', 'Table Tennis Championship', 'KRISH RAJ: 9835848502, SAURAV KUMAR SINHA: 7870784659, ISHA KUMARI:7091341504')">
+        <p style="text-align: center; color: #edf1f2; padding: 2px;">Table Tennis</p></div>
    
     </div>
   </div>
@@ -726,137 +1047,119 @@ ul li a:hover {
   </div>
   
 </div> -->
-
-<!-- <div class="slider-container">
-  <div class="slider">
-    <div class="slide"><img src="images/dragon_1.jpg" alt="Image 1" onclick="onPressImage('images/dragon_1.jpg', 'dragon_1', 'Ritesh: 9876543210, Akhilesh: 9404549742')"></div>
-    <div class="slide"><img src="images/dragon_2.jpg" alt="Image 2" onclick="onPressImage('images/dragon_2.jpg', 'dragon_2', 'Ritesh: 9876543210, Akhilesh: 9404549742')"></div>
-    <div class="slide"><img src="images/dragon_3.jpg" alt="Image 3" onclick="onPressImage('images/dragon_3.jpg', 'dragon_3', 'Ritesh: 9876543210, Akhilesh: 9404549742')"></div>
-    <div class="slide"><img src="images/dragon_5.jpg" alt="Image 4" onclick="onPressImage('images/dragon_5.jpg', 'dragon_5', 'Ritesh: 9876543210, Akhilesh: 9404549742')"></div>
-    <div class="slide"><img src="images/dragon_7.jpg" alt="Image 5" onclick="onPressImage('images/dragon_7.jpg', 'dragon_7', 'Ritesh: 9876543210, Akhilesh: 9404549742')"></div>
-  
-  </div>
-</div> -->
-
-
-
-<!-- <div id="event-info" class="event-info" style="display: flex;">
-  <h2 id="event-title" style="display: block;
-  font-size: 2em;font-size: 24px;
-  margin-bottom: 15px;"></h2>
-  <div class="button1" style="display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 15px;
-  flex-wrap: wrap;">
- <a href="https://forms.gle/QVdqD7r1RRkX9xkL6" class="_workButton_1cqbm_315" target="_blank" rel="noopener noreferrer" style="padding: 1em 1.5em;
- border: none;
- outline: none;
- margin: 2px;
- font-weight: 20;
- font-size: large;
- font-family: Inter,sans-serif;
- color: #fff;
- background: #111;
-   background-image: none;
-   background-size: auto;
- cursor: pointer;
- position: relative;
- z-index: 0;
- border-radius: 10px;
- user-select: none;
- -webkit-user-select: none;
- touch-action: manipulation;
- background-image: linear-gradient(45deg,rgb(102, 94, 86),rgb(64, 46, 46),#5c5956,#3c3837);
- background-size: 200% 200%;
- animation: _gradient-rotation_1cqbm_1 5s infinite linear;
- transition: all .3s ease;
- text-decoration: none;
-">Register Now</a>
-
-<a href="https://forms.gle/QVdqD7r1RRkX9xkL6" class="_workButton_1cqbm_315" target="_blank" rel="noopener noreferrer" style="padding: 1em 1.5em;
-border: none;
-outline: none;
-margin: 2px;
-font-weight: 20;
-font-size: large;
-font-family: Inter,sans-serif;
-color: #fff;
-background: #595454;
-  background-image: none;
-  background-size: auto;
+<div class="events-section">
+  <h1 style="margin: 10px 0;
+font-size: 2rem;position: relative;
 cursor: pointer;
-position: relative;
-z-index: 0;
-border-radius: 10px;
-user-select: none;
--webkit-user-select: none;
-touch-action: manipulation;
-background-image: linear-gradient(45deg,rgb(102, 94, 86),rgb(64, 46, 46),#5c5956,#3c3837);
-background-size: 200% 200%;
-animation: _gradient-rotation_1cqbm_1 5s infinite linear;
-transition: all .3s ease;
-text-decoration: none;
-">View RuleBook</a>
+transition: color .3s;color: white;
+font-size: 3.7em;font-weight: 600; font-family:Georgia, 'Times New Roman', Times, serif;" class="hover-underline">EVENTS</h1>
+  <div class="slider">
+    <div class="slider-track">
+      <div class="slide"><img src="images/carrom.webp" alt="Slide 1"></div>
+      <div class="slide"><img src="images/chess-CJlY9TWO.png" alt="Slide 2"></div>
+      <div class="slide"><img src="images/cricket-DlJWfze2.png" alt="Slide 3"></div>
+      <div class="slide"><img src="images/volleyball-DBeG2px1.png" alt="Slide 4"></div>
+    </div>
   </div>
-  <div class="contact" style="padding: 1em 0.5em;
-  border: none;
-  outline: none;
-  margin: 0.5px;
-  font-weight: 20;
-  font-family: Inter,sans-serif;
-  color: #fff;
-  background: #111;
-    background-image: none;
-    background-size: auto;
-  cursor: pointer;
-  position: relative;
-  z-index: 0;
-  border-radius: 10px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  background-image: linear-gradient(45deg,rgb(102, 94, 86),rgb(64, 46, 46),#5c5956,#3c3837);
-  animation: _gradient-rotation_1cqbm_1 5s infinite linear;
-  transition: all .3s ease;
-  text-decoration: none;">
-      <h3 style="margin: 0 0 10px 0;">Point of Contacts:</h3>
-      <div style="display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      font-weight: 20;">
-      <p id="event-contacts" style="font-size: 1.2rem;
-      color: #fff;justify-content: center;
-      align-items: center;margin: 5px 0;"></p>
-       <p id="event-contacts1" style="font-size: 1.2rem;
-       color: #fff;margin: 5px 0;"></p>
-      </div>
-  </div>
-</div> -->
+  <button class="see-all-button" onclick="onPressEventAll()">SEE ALL EVENTS</button>
+</div>
+
   <div class="contact-container">
     <div class="contact-info">
-      <h2>Contact Info</h2>
-      <p style="padding-right: 28px;"> <i class="fas fa-map-marker-alt" style="padding: 10px;color: #d2691e;"></i><strong>ADDress</strong><br>
-        <span style="padding:35px">Mahdah, Itarhi Road, P.O.-Gajadhar Ganj,</span><br>
-        <span style="padding:35px">Near Police Line BUXAR,</span><br>
-        <span style="padding:35px">PinCode : 802103</span></p>
-      <span><i class="fa fa-solid fa-phone" style="padding:10px; color: #d2691e;"></i><strong>PHONE</strong></span><br>
-      <span style="padding:35px;">060183297194</span><br>
-      <span><i class="fas fa-envelope" style="padding: 10px; color: #d2691e;"></i><strong>Email</strong> </span><br>
-        <a href="mailto:infinito@iitp.ac.in" style="padding:35px;">gecbuxar1@gmail.com</a>
-    </div>
+      <h2 class="contactText">CONTACT INFO</h2>
+      <div class="iconaddress">
+        <i class="fas fa-map-marker-alt" style="font-size: 2rem;
+        color: #8b4513;
+        margin-right: 1rem;"></i>
+       <div>
+         <h4>ADDRESS</h4>
+         <p class="infotext">Mahdah, Itarhi Road, P.O.-Gajadhar Ganj,</p>
+         <p style="padding-top:1px">Near Police Line BUXAR,</p>
+         
+        <p style="padding-top:1px">PinCode : 802103</p>
+      </div>
+      </div>
+      <div class="iconaddress">
+        <i class="fa fa-solid fa-phone" style="font-size: 2rem;
+        color: #8b4513;
+        margin-right: 1rem;"></i>
+        <div>
+          <h4>PHONE</h4>
+          <p class="infotext">060183297194</p>
+       </div>
+       </div>
+       <div class="iconaddress">
+        <i class="fas fa-envelope" style="font-size: 2rem;
+        color: #8b4513;
+        margin-right: 1rem;"></i>
+        <div>
+          <h4>EMAIL</h4>
+          <p class="infotext">gecbuxar1@gmail.com</p>
+       </div>
+       </div>
+       </div>
     <div class="map">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.2906337067646!2d85.0901051145386!3d25.5374799837455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58fe6bdaaaab%3A0x89b9705a0f245ebd!2sIIT%20Patna!5e0!3m2!1sen!2sin!4v1639110000000!5m2!1sen!2sin"
-        width="150%"
-        height="180%"
+        width="700px"
+        height="300px"
         style="border:0;"
         allowfullscreen=""
         loading="lazy">
       </iframe>
     </div>
-  </div>
+    </div>
+
+
+ 
+  
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Left Section -->
+      <div class="footer-section">
+        <p>
+          Everyone has the <span class="highlight">FIRE</span> but the 
+          <span class="highlight">CHAMPIONS</span> know when to ignite the spark
+        </p>
+        <p class="follow-us">FOLLOW US</p>
+        <div class="social-icons">
+          <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+          <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+          <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+          <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+          <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
+        </div>
+      </div>
+  
+      <!-- Middle Section -->
+      <div class="footer-section">
+        <p> <i class="fas fa-map-marker-alt" style="padding: 10px;"></i> Mahdah, Itarhi Road, P.O.-Gajadhar Ganj,<br>
+          <span style="padding:37px">Near Police Line BUXAR,</span><br>
+          <span style="padding:37px">PinCode : 802103</span></p>
+        <p>
+          <i class="fa fa-solid fa-phone" style="padding: 10px;"></i> 060183297194<br>
+          <span class="small-text">Give us a call</span>
+        </p>
+        <p>
+          <i class="fas fa-envelope" style="padding: 10px;"></i> gecbuxar1@gmail.com<br>
+          <span class="small-text">Mail us here</span>
+        </p>
+      </div>
+  
+      <!-- Right Section -->
+      <div class="footer-section">
+        <p><strong>USEFUL LINKS</strong></p>
+        <ul>
+          <li onclick="onHome()"><a href="#">Home</a></li>
+          <li onclick="onEvent()"><a href="#">Events</a></li>
+         </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <h2 style="color: white;font-weight: bold;">Copyright © 2025 GEC Buxer's</h2>
+    </div>
+    
+  </footer>
 
   <script>
     function showSideBar(){
@@ -871,13 +1174,15 @@ text-decoration: none;
     // const heroSection = document.querySelector('.background');
     // heroSection.style.display= 'flex';
     // window.open("https://media.istockphoto.com/id/184233907/photo/infinite-light.jpg?s=612x612&w=0&k=20&c=bO5GBmJUdRyaFmnsRyk-etEtMjIHKZRFn-T5jGwhq2Q=")
-    const banner = document.querySelector('.background1');
-    banner.style.display= 'none';
     const sidebar = document.querySelector('.background');
     sidebar.style.display= 'flex';
     const firstDiv = document.querySelector('.hero-section');
     firstDiv.style.display= 'flex';
-    const thirdDiv = document.querySelector('.contact-container');
+    const banner = document.querySelector('.background1');
+    banner.style.display= 'none';
+    const fourthdev = document.querySelector('.events-section');
+   fourthdev.style.display='flex';
+   const thirdDiv = document.querySelector('.contact-container');
     thirdDiv.style.display= 'flex';
   }
 
@@ -890,6 +1195,8 @@ text-decoration: none;
     firstDiv.style.display= 'none';
     const thirdDiv = document.querySelector('.contact-container');
     thirdDiv.style.display= 'none';
+    const fourthdev = document.querySelector('.events-section');
+   fourthdev.style.display='none'
    }
 
    function onPressImage(x, y, z){
@@ -929,54 +1236,22 @@ text-decoration: none;
     window.open("https://docs.google.com/forms/d/1jzhrwQ2D_L6Nkz9--GmuszRXYCOennkzOPXa54mslAs/edit");
 
    }
+
+   function onPressEventAll(){
+    const banner = document.querySelector('.background1');
+    banner.style.display= 'flex';
+    const sidebar = document.querySelector('.background');
+    sidebar.style.display= 'none';
+    const firstDiv = document.querySelector('.hero-section');
+    firstDiv.style.display= 'none';
+    const thirdDiv = document.querySelector('.contact-container');
+    thirdDiv.style.display= 'none';
+   const fourthdev = document.querySelector('.events-section');
+   fourthdev.style.display='none'
+   }
   </script>
 
-<footer class="footer">
-  <div class="footer-container">
-    <!-- Left Section -->
-    <div class="footer-section">
-      <p>
-        Everyone has the <span class="highlight">FIRE</span> but the 
-        <span class="highlight">CHAMPIONS</span> know when to ignite the spark
-      </p>
-      <p class="follow-us">FOLLOW US</p>
-      <div class="social-icons">
-        <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-        <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
-        <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
-        <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
-        <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
-      </div>
-    </div>
 
-    <!-- Middle Section -->
-    <div class="footer-section">
-      <p> <i class="fas fa-map-marker-alt" style="padding: 10px;"></i> Mahdah, Itarhi Road, P.O.-Gajadhar Ganj,<br>
-        <span style="padding:37px">Near Police Line BUXAR,</span><br>
-        <span style="padding:37px">PinCode : 802103</span></p>
-      <p>
-        <i class="fa fa-solid fa-phone" style="padding: 10px;"></i> 060183297194<br>
-        <span class="small-text">Give us a call</span>
-      </p>
-      <p>
-        <i class="fas fa-envelope" style="padding: 10px;"></i> gecbuxar1@gmail.com<br>
-        <span class="small-text">Mail us here</span>
-      </p>
-    </div>
-
-    <!-- Right Section -->
-    <div class="footer-section">
-      <p><strong>USEFUL LINKS</strong></p>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Events</a></li>
-       </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <h2 style="color: white;font-weight: bold;">Copyright © 2024 Infinito</h2>
-  </div>
-</footer>
 
 </body>
 </html>
